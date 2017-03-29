@@ -28,6 +28,156 @@
 
 
     <body class="container-fluid">
+      <header>
+         <!-- Nav Bar -->
+         <nav class="navbar navbar-default" role="navigation">
+           <div class="container-fluid">
+             <div class="navbar-header">
+               <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+               <a class="navbar-brand" href="#">Kitch-n-listr</a>
+             <!-- </div> -->
+           </div>
+           <!-- Buttons for user account informantion, they have corresponding modals -->
+           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+             <button type="button" class="btn btn-primary navbar-btn" id="signUpButton" data-toggle="modal" data-target="#signUpModal">
+           Register!
+           </button>
+             <button type="button" class="btn btn-primary navbar-btn" id="signInButton" data-toggle="modal" data-target="#signInModal">
+           Sign In!
+           </button>
+             <button type="button" class="btn btn-primary navbar-btn hidden" id="changePwButton" data-toggle="modal" data-target="#changePwModal">
+           Change Password!
+           </button>
+             <button type="button" class="btn btn-primary navbar-btn hidden" id="sign-out">
+               Sign Out!
+             </button>
+           </div>
+          </div>
+         </nav>
+
+
+
+
+         <!-- User account Modals -->
+         <!-- Sign-Up -->
+         <div class="registration">
+           <div class="modal fade" id="signUpModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+             <div class="modal-dialog" role="document">
+               <div class="modal-content">
+                 <div class="modal-header">
+                   <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                 <span aria-hidden="true">&times;</span>
+               </button>
+                   <h4 class="modal-title" id="SignUpModalLabel">Register!</h4>
+                 </div>
+                 <div class="modal-body">
+                   <form id="sign-up">
+                     <fieldset>
+                       <legend>Sign up!</legend>
+                       <label>
+                     Email
+                     <input type="text" name="credentials[email]" placeholder="Email">
+                   </label>
+                       <label>
+                     Password
+                     <input type="password" name="credentials[password]" placeholder="Password">
+                   </label>
+                       <label>
+                     Password Confirmation
+                     <input type="password" name="credentials[password_confirmation]" placeholder="Confirm Password">
+                   </label>
+                       <input type="submit" name="submit" value="Sign up!">
+                     </fieldset>
+                     <div class="form-message" id="sign-up-prompt"></div>
+                   </form>
+                 </div>
+                 <div class="modal-footer">
+                   <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                 </div>
+               </div>
+             </div>
+           </div>
+           <!-- Sign in modal -->
+
+           <div class="modal fade" id="signInModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+             <div class="modal-dialog" role="document">
+               <div class="modal-content">
+                 <div class="modal-header">
+                   <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                 <span aria-hidden="true">&times;</span>
+               </button>
+                   <h4 class="modal-title" id="SignInModalLabel">Sign In!</h4>
+                 </div>
+                 <div class="modal-body">
+                   <form id="sign-in">
+                     <fieldset>
+                       <legend>Sign In!</legend>
+                       <label>
+                     Email
+                     <input type="text" name="credentials[email]" placeholder="Email">
+                   </label>
+                       <label>
+                     Password
+                     <input type="password" name="credentials[password]" placeholder="Password">
+                   </label>
+                       <input type="submit" name="submit" value="Sign In!">
+                     </fieldset>
+                     <div class="form-message" id="sign-in-prompt"></div>
+                   </form>
+                 </div>
+                 <div class="modal-footer">
+                   <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                 </div>
+               </div>
+             </div>
+           </div>
+           <!-- change password modal -->
+
+           <div class="modal fade" id="changePwModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+             <div class="modal-dialog" role="document">
+               <div class="modal-content">
+                 <div class="modal-header">
+                   <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                 <span aria-hidden="true">&times;</span>
+               </button>
+                   <h4 class="modal-title" id="ChangePwModalLabel">Change Your Password!</h4>
+                 </div>
+                 <div class="modal-body">
+                   <form id="change-password">
+                     <fieldset>
+                       <legend>Change Password!</legend>
+                       <label>
+                     Current Password
+                     <input type="password" type="current password" name="passwords[old]" placeholder="Old Password">
+                   </label>
+                       <label>
+                     New Password
+                     <input type="password" type="new password" name="passwords[new]" placeholder="New Password">
+                   </label>
+                       <input type="submit" name="submit" value="Change Password!">
+                     </fieldset>
+                     <div class="form-message" id="change-pw-prompt"></div>
+                   </form>
+                 </div>
+                 <div class="modal-footer">
+                   <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                 </div>
+               </div>
+             </div>
+           </div>
+         </div>
+
+       </header>
+
+
+
+
+
       <h1>Welcome</h1>
 
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
@@ -37,5 +187,7 @@
       velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
       cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
       est laborum.</p>
+
+
     </body>
 </html>
