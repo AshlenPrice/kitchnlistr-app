@@ -2,6 +2,7 @@ const showKitchenTemplate = require('../templates/kitchens.handlebars')
 const showKitchenAuth = require('../templates/authKitchens.handlebars')
 
 const indexKitchensSuccess = function (data) {
+  console.log(data)
   const showKitchensHtml = showKitchenTemplate({kitchens: data.kitchens})
   $('.kitchens').html(showKitchensHtml)
 }
@@ -10,13 +11,13 @@ const indexError = function () {
   alertify.error('Something went wrong')
 }
 
-// const indexKitchensSignedIn = function (data) {
-//   if (data.kitchens.length === 0) {
-//   alertify.error("You don't have any kitchen listings!")
-//   }
-//   const showKitchensAuthHtml = showKitchenAuth({kitchens: data.kitchens})
-//   $('.kitchens').html(showKitchensAuthHtml)
-// }
+const indexKitchensSignedIn = function (data) {
+  if (data.kitchens.length === 0) {
+  alertify.error("You don't have any kitchen listings!")
+  }
+  const showKitchensAuthHtml = showKitchenAuth({kitchens: data.kitchens})
+  $('.kitchens').html(showKitchensAuthHtml)
+}
 
 const createSuccess = function () {
   alertify.success('Listing Successfully Created!')
@@ -45,13 +46,13 @@ const updateSuccess = function () {
 }
 
 const deleteSuccess = function () {
-  alertify.success('Blog Successfully Deleted')
-  $('.sign-in-show').click()
+  alertify.success('Listing Successfully Deleted')
+  $('.sign-in-sh Z ow').click()
 }
 
 module.exports = {
   indexKitchensSuccess,
-  // indexKitchensSignedIn,
+  indexKitchensSignedIn,
   indexError,
   createSuccess,
   createError,

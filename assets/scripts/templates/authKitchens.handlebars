@@ -37,7 +37,9 @@
                  <input type="text" name="kitchen[available_hours]" value="{{kitchen.available_hours}}" class="clean-update">
 
                  <textarea type="text" name="kitchen[description]" class="clean-update">{{kitchen.description}}</textarea>
-                 <input type="submit" data-id="{{kitchen.id}}" name="submit">
+                 <!-- <input type="submit" data-id="{{kitchen.id}}" name="submit"> -->
+                 <button type="submit" class="btn btn-default update-kitchen"> Update Listing</button>
+
              </form>
              <div class="warning-update-data">
 
@@ -49,7 +51,6 @@
          </div>
        </div>
      </div>
-
 
      <button type="button" name="button" class="btn btn-default remove-kitchen" data-id="{{kitchen.id}}">Remove</button>
    </div>

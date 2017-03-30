@@ -9,8 +9,6 @@ $(() => {
   setAPIOrigin(location, config)
   authEvents.addHandlers()
   kitchenEvents.addHandlers()
-  $('.log').on('submit', '.submit-kitchen-update', kitchenEvents.onUpdateKitchen)
-  $('.log').on('click', '.remove-kitchen', kitchenEvents.onDeleteKitchen)
 })
 
 // use require with a reference to bundle the file and use it in this file

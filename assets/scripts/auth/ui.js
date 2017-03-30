@@ -8,9 +8,7 @@ const success = () => {
 const signUpSuccess = () => {
   alertify.success('Account Created!')
   $('#sign-up')[0].reset()
-  $('#sign-up-prompt').text(' ')// this cancels out the 'account Created msg, need new method '
   $('#signUpModal').modal('hide')
-
 }
 
 const signUpFail = () => {
@@ -33,6 +31,7 @@ const changePwSuccess = () => {
 
 const changePwFail = (data) => {
   alertify.error("Something's not Right! Try Again!")
+  $('#change-password')[0].reset()
 }
 
 const failure = () => {
@@ -48,7 +47,7 @@ const signInSuccess = () => {
   $('#changePwButton').removeClass('hidden')
   $('#sign-out').removeClass('hidden')
   $('.kitchen-render').html(signedInKitchens)
-  $('.kitchens').on('click', '#.sign-in-show', kitchenEvents.onIndexKitchens)
+  // $('.kitchens').on('click', '#.sign-in-show', kitchenEvents.onIndexKitchens)
   $('.kitchens').html('')
 }
 
@@ -58,9 +57,7 @@ const signOutSuccess = () => {
   $('#signInButton').removeClass('hidden')
   $('#changePwButton').addClass('hidden')
   $('#sign-out').addClass('hidden')
-  $('#change-pw-prompt').text(' ')
-  $('#sign-up-prompt').text(' ')
-  $('#sign-in-prompt').text(' ')
+  $('.kitchens').html('')
 }
 
 module.exports = {

@@ -5,10 +5,10 @@ const store = require('../store')
 const createKitchen = function (data) {
   return $.ajax({
     url: config.apiOrigin + '/kitchens',
+    method: 'POST',
     headers: {
       Authorization: `Token token=${store.user.token}`
     },
-    method: 'POST',
     data
   })
 }
@@ -16,19 +16,20 @@ const createKitchen = function (data) {
 const indexKitchens = function () {
   return $.ajax({
     url: config.apiOrigin + '/kitchens',
+
     method: 'GET'
   })
 }
 
-// const indexKitchensSignedIn = function () {
-//   return $.ajax({
-//     url: config.apiOrigin + '/kitchens',
-//     headers: {
-//       Authorization: `Token token=${store.user.token}`
-//     },
-//     method: 'GET'
-//   })
-// }
+const indexKitchensSignedIn = function () {
+  return $.ajax({
+    url: config.apiOrigin + '/userskitchen',
+    headers: {
+      Authorization: `Token token=${store.user.token}`
+    },
+    method: 'GET'
+  })
+}
 
 const showKitchen = function (id) {
   return $.ajax({
@@ -66,7 +67,7 @@ module.exports = {
   createKitchen,
   showKitchen,
   destroyKitchen,
-  updateKitchen
-  // indexKitchensSignedIn
+  updateKitchen,
+  indexKitchensSignedIn
 
 }
