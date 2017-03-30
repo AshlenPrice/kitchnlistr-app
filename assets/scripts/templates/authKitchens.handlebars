@@ -1,0 +1,57 @@
+{{#each kitchens as |kitchen|}}
+
+
+   <div class="card card-1" data-id="{{kitchen.id}}">
+     <h3>{{kitchen.kitchen_name}}</h3>
+     <br>
+          <p>{{kitchen.location}}
+               <br>
+             {{kitchen.phone_number}}
+                <br>
+             {{kitchen.email}}
+                <br>
+             {{kitchen.available_hours}}
+                <br>
+             {{kitchen.description}}
+          </p>
+
+     <!-- Button trigger modal -->
+     <button type="button" class="btn btn-default" data-toggle="modal" data-target="#mod{{kitchen.id}}">
+       Update!
+     </button>
+
+     <!-- Modal -->
+     <div class="modal kapat" id="mod{{kitchen.id}}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+       <div class="modal-dialog" role="document">
+         <div class="modal-content">
+           <div class="modal-header">
+             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+             <h4 class="modal-header" id="myModalLabel">Update!</h4>
+           </div>
+           <div class="modal-body">
+             <form class="submit-kitchen-update" data-id="{{kitchen.id}}">
+                 <input type="text" name="kitchen[kitchen_name]" value="{{kitchen.kitchen_name}}" class="clean-update">
+                 <input type="text" name="kitchen[location]" value="{{kitchen.location}}" class="clean-update">
+                 <input type="text" name="kitchen[phone_number]" value="{{kitchen.phone_number}}" class="clean-update">
+                 <input type="text" name="kitchen[email]" value="{{kitchen.email}}" class="clean-update">
+                 <input type="text" name="kitchen[available_hours]" value="{{kitchen.available_hours}}" class="clean-update">
+
+                 <textarea type="text" name="kitchen[description]" class="clean-update">{{kitchen.description}}</textarea>
+                 <input type="submit" data-id="{{kitchen.id}}" name="submit">
+             </form>
+             <div class="warning-update-data">
+
+             </div>
+           </div>
+           <div class="modal-footer">
+             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+           </div>
+         </div>
+       </div>
+     </div>
+
+
+     <button type="button" name="button" class="btn btn-default remove-kitchen" data-id="{{kitchen.id}}">Remove</button>
+   </div>
+
+{{/each}}

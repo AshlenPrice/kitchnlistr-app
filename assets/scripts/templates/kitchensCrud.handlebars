@@ -1,0 +1,34 @@
+<div class="signed-in-user-kitchen">
+<!--Create a New Kitchen  -->
+  <button type="button" class="btn btn-default" data-toggle="modal" data-target="#kitchen-create">
+        New Kitchen Listing
+      </button>
+
+  <!-- Modal form to create new kitchen-->
+  <div class="modal kapat" id="kitchen-create" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="myModalLabel">New Listing</h4>
+        </div>
+        <div class="modal-body">
+
+          <form class='create-kitchen'>
+            <input type="text" name="kitchen[kitchen_name]" placeholder="Enter Kitchen Name" class="clean-update">
+            <input type="text" name="kitchen[location]" placeholder="Enter Kitchen Location" class="clean-update">
+            <input type="text" name="kitchen[phone_number]" placeholder="123-456-7890" class="clean-update">
+            <input type="text" name="kitchen[email]" placeholder="contact@contact.com"  class="clean-update">
+            <input type="text" name="kitchen[available_hours]" placeholder="Monday-Friday, 9AM - 9PM" class="clean-update">
+
+            <textarea type="text" name="kitchen[description]" placeholder="List your kitchen's features and equipment" class="clean-update"></textarea>
+            <button type="submit" class="btn btn-default create-kitchen"> Save Listing</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- index kitchens -->
+  <button type="button" class="btn btn-default sign-in-show">My Kitchen listings</button>
+</div>

@@ -1,5 +1,6 @@
 'use strict'
-
+const signedInKitchens = require('../templates/kitchensCrud.handlebars')
+const kitchenEvents = require('../kitchens/events.js')
 const success = () => {
   alertify.success('Action Successful')
 }
@@ -9,15 +10,17 @@ const signUpSuccess = () => {
   $('#sign-up')[0].reset()
   $('#sign-up-prompt').text(' ')// this cancels out the 'account Created msg, need new method '
   $('#signUpModal').modal('hide')
+
 }
 
 const signUpFail = () => {
   alertify.error('There Seems To Be An Error. Try Again!')
+  $('#sign-up')[0].reset()
 }
 
 const signInFail = () => {
   alertify.error('There Seems To Be An Error. Try Again!')
-  console.log('failure') // or make it here?
+  console.log('failure')
   $('#sign-in')[0].reset()
 }
 
@@ -40,12 +43,13 @@ const signInSuccess = () => {
   alertify.success('Sign-in Succesful!')
   $('#sign-in')[0].reset()
   $('#signInModal').modal('hide')
-
   $('#signUpButton').addClass('hidden')
   $('#signInButton').addClass('hidden')
   $('#changePwButton').removeClass('hidden')
   $('#sign-out').removeClass('hidden')
-  // $('.show').removeClass('hidden');
+  $('.kitchen-render').html(signedInKitchens)
+  $('.kitchens').on('click', '#.sign-in-show', kitchenEvents.onIndexKitchens)
+  $('.kitchens').html('')
 }
 
 const signOutSuccess = () => {
