@@ -1,58 +1,49 @@
 # Kitchn Listr
-- API
-- abo
-
 ![App snippet](http://i.imgur.com/GBhbDmI.png)
-Client:
 
-An embedded screenshot of the app
-Explanations of the technologies used
-A couple paragraphs about the general approach you took
-Installation instructions for any dependencies
-Link to your user stories – who are your users, what do they want, and why?
-Link to your wireframes – sketches of major views / interfaces in your application
-Link to your pitch deck – documentation of your wireframes, user stories, and proposed architecture
-Descriptions of any unsolved problems or major hurdles you had to overcome
+- Checkout this app's [API](https://github.com/AshlenPrice/capstone-api)
+- Deployed On [Heroku](https://secure-mountain-84093.herokuapp.com/)
+- Checkout [Kitchn Listr ](https://ashlenprice.github.io/kitchnlistr-app/)
+
+Kitchn Listr app prototype is an app in progress. The purpose of the app is to build a network of
+seasoned cooks/chefs and private Kitchen owners that want to help eachother grow. There are many chefs out there
+that need spaces to prepare large quantities of goods and don't have access to the proper space. There are also
+many kitchen owners that would be willing to lease out their kitchens when they are not in use. This app is the
+perfect marriage to help fill tha gap.
+Ideally this app will be a type of Yelp app for comercial kitchens. Where people can list their kitchen for rent.
+Chefs can rate the kitchens and owners can see those ratings and respond to any expressed concerns or questions.
+
+## Approach
+I started out thinking about the idea for this app, and planning out the architecture and wireframes.
+That took a couple days to get down the way I wanted it to. After I planned I began to worok on the back end
+of my app and it took me a while. I ran into some pretty major challeneges trying to implement profile for the user.
+Once I got through that, I worked on my front end, I started off trying to use Ember but was unable to because I
+didn't have much time and I was too unfamiliar with ember. Over all I think that this app has great potential.
+
+## Technologies Used
+- JS
+- Handlebars
+- Alertify.js
+- HTML/CSS
+- Ruby/Rails (backend)
 
 
-Checkout [Kitchn Listr ](https://ashlenprice.github.io/kitchnlistr-app/)
+#### Dependencies
+Dependencies are installed with npm install
 
-A template for starting front-end projects. Webpack for `require` system, build
-pipeline, and development server. Boostrap and Handlebars.js included. No
-front-end frameworks included.
-
-
-## Dependencies
-
-Install dependencies with `npm install`.
-## Installation
-
-
-# Planning
-
-## Questions/requirements
-  - What are you making?
-      Kitch'n Listr is a directory of local comercial kitch'n that are available for rent.
-
-  - What features do you want to have?
-  - Who are you building this for?
-      This app is targeted at both commercial kichen owners and chefs
-  -
+## wireframes & ERD
+* Original [Wireframe](http://i.imgur.com/LtFxIoYl.jpg)
+* Initial [ERD](http://i.imgur.com/S6ZmKxPl.jpg)
+* Final [ERD](http://i.imgur.com/w8mB3tdm.jpg)
+*Final [Wireframe](http://i.imgur.com/W6qyJVK.jpg)
 
 ## Planned User Stories
 
-  As a guest I want to:
-    - Visit KitchnListr to view available kitchens to rent.
-    - Create an account/ sign-in to list a kitchen I own for rent.
-    - Create an account/sign-in to review a kitchen I have rented.
+As a guest I want to:
     - View Reviews and ratings
     - Search for a kitchen by features
 
   As a Kitch'n Owner I want to:
-    - Create a Kitch'n listing.
-    - Upload pictures of my Kitch'n.
-    - Edit my listing and its data.
-    - Remove my Kitch'n listing
     - View my ratings/reviews
     - Change my password.
     - be able to log out.
@@ -67,38 +58,35 @@ Install dependencies with `npm install`.
     - Change my password.
     - be able to log out.
     - Contact a Kitch'n owner to for more informantion
+    -
 ## Completed User stories
+As a guest I want to:
+  - Visit KitchnListr to view available kitchens to rent.
+  - Create an account/ sign-in to list a kitchen I own for rent.
 
-## Features
-  - Auth for users
-  - Show guests Kitch'n listings |`/kitchens#show`, `/kitchens#index`|
-  - CRUD for Kitch'n (create, read, update, delete)
+As a Kitch'n Owner I want to:
+  - Create a Kitch'n listing.
+  - Upload pictures of my Kitch'n.
+  - Edit my listing and its data.
+  - Remove my Kitch'n listing
+
+
+## Project Challenge & Future Goals
+  I had a lot of challenges on the back enf of my projcet, where I spent most of the time on.
+  On the front end I stuggled a bit with handlebars and my events I had a hard time ensuring that
+  I was targting the right data on the back end to render the approprate data on the front end.
+  Due to the time constrains that I had I ended up using the browser template, so in the future
+  I would like to use ember to build another front end.
+
+  Unfinished features & Improvements
   - CRUD for Review (create, read, update, delete)
-  - Image uploads
-  - Store assets to AWS
+  - CRUD for Review (create, read, update, delete)
+  - Image uploads for both kitchens and users
+  - Ability to search kitchens nearby
+  - Ability to message a kitchen directly
+  - Store Images to AWS
   - Owner access reviews on their kitchen
-  - Star reviews
+  - Star rating system
 
 
-
-## Routes
-
-
-## Project concerns
-  - How to model multiple profiles
-  - how to model an array of equipment
-  - Good ember ui kit package?
-
-
-## Shout Outs
-  - Jackson
-  - Sam
-  - Alex
-  - Gabby
-  - Wei
-  - Zhu
-  - Yen
-  ## wireframes & ERD
-  * Original ![Wireframe](http://i.imgur.com/LtFxIoYl.jpg)
-  * Initial ![ERD](http://i.imgur.com/S6ZmKxPl.jpg)
-  * Final [ERD]()
+FYI- My first commit on day 1 of user stories and wireframes are on my back-end repo in the planning.md document.
