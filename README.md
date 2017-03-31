@@ -35,7 +35,7 @@ Dependencies are installed with npm install
 * Original [Wireframe](http://i.imgur.com/LtFxIoYl.jpg)
 * Initial [ERD](http://i.imgur.com/S6ZmKxPl.jpg)
 * Final [ERD](http://i.imgur.com/w8mB3tdm.jpg)
-*Final [Wireframe](http://i.imgur.com/W6qyJVK.jpg)
+* Final [Wireframe](http://i.imgur.com/W6qyJVK.jpg)
 
 ## Planned User Stories
 
