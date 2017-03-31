@@ -40,25 +40,25 @@ Dependencies are installed with npm install
 ## Planned User Stories
 
 As a guest I want to:
-    - View Reviews and ratings
-    - Search for a kitchen by features
+  - View Reviews and ratings
+  - Search for a kitchen by features
 
-  As a Kitch'n Owner I want to:
-    - View my ratings/reviews
-    - Change my password.
-    - be able to log out.
+As a Kitch'n Owner I want to:
+  - View my ratings/reviews
+  - Change my password.
+  - be able to log out.
 
-  As a Chef I want to:
-    - Create a review and rate Kitch'ns I've rented.
-    - Change/Edit the reviews I've written.
-    - Delete My reviews/ratings.
-    - Add a Kitch'n to my favorites
-    - Schedule/Reserve a kitch'n slot.
-    - Add pictures of what I've cooked.
-    - Change my password.
-    - be able to log out.
-    - Contact a Kitch'n owner to for more informantion
-    -
+As a Chef I want to:
+  - Create a review and rate Kitch'ns I've rented.
+  - Change/Edit the reviews I've written.
+  - Delete My reviews/ratings.
+  - Add a Kitch'n to my favorites
+  - Schedule/Reserve a kitch'n slot.
+  - Add pictures of what I've cooked.
+  - Change my password.
+  - be able to log out.
+  - Contact a Kitch'n owner to for more informantion
+
 ## Completed User stories
 As a guest I want to:
   - Visit KitchnListr to view available kitchens to rent.
