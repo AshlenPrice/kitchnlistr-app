@@ -18,7 +18,6 @@ const signUpFail = () => {
 
 const signInFail = () => {
   alertify.error('There Seems To Be An Error. Try Again!')
-  console.log('failure')
   $('#sign-in')[0].reset()
 }
 
@@ -26,7 +25,6 @@ const changePwSuccess = () => {
   alertify.success('Password Successfully Changed!')
   $('#change-password')[0].reset()
   $('#changePwModal').modal('hide')
-  // $('#change-pw-prompt').text(' ');
 }
 
 const changePwFail = (data) => {
@@ -47,7 +45,6 @@ const signInSuccess = () => {
   $('#changePwButton').removeClass('hidden')
   $('#sign-out').removeClass('hidden')
   $('.kitchen-render').html(signedInKitchens)
-  // $('.kitchens').on('click', '#.sign-in-show', kitchenEvents.onIndexKitchens)
   $('.kitchens').html('')
 }
 
@@ -58,6 +55,7 @@ const signOutSuccess = () => {
   $('#changePwButton').addClass('hidden')
   $('#sign-out').addClass('hidden')
   $('.kitchens').html('')
+  $('.kitchen-render').html('')
 }
 
 module.exports = {

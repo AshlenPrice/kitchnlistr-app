@@ -22,10 +22,8 @@ const onSignUp = function (event) {
 const onSignIn = function (event) {
   event.preventDefault()
   const data = getFormFields(event.target)
-  console.log(data) // everything look good?
   api.signIn(data)
     .then((response) => {
-      console.log(response) // everything look good?
       store.user = response.user
       return store.user
     })

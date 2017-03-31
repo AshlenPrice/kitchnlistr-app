@@ -2,7 +2,6 @@ const showKitchenTemplate = require('../templates/kitchens.handlebars')
 const showKitchenAuth = require('../templates/authKitchens.handlebars')
 
 const indexKitchensSuccess = function (data) {
-  console.log(data)
   const showKitchensHtml = showKitchenTemplate({kitchens: data.kitchens})
   $('.kitchens').html(showKitchensHtml)
 }
