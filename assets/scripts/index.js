@@ -9,6 +9,9 @@ $(() => {
   setAPIOrigin(location, config)
   authEvents.addHandlers()
   kitchenEvents.addHandlers()
+  $('.modal').on('hidden.bs.modal', function () {
+    $(this).find('form')[0].reset()
+  })
 })
 
 // use require with a reference to bundle the file and use it in this file
