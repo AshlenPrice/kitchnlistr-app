@@ -61,14 +61,12 @@
          </nav>
 
 
-
-
          <!-- User account Modals -->
    <!-- Sign-Up -->
    <div class="registration">
      <div class="modal fade" id="signUpModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
        <div class="modal-dialog" role="document">
-         <div class="modal-content">
+         <div class="modal-content loginmodal-container">
            <div class="modal-header">
              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
            <span aria-hidden="true">&times;</span>
@@ -78,20 +76,18 @@
            <div class="modal-body">
              <form id="sign-up">
                <fieldset>
-                 <legend>Sign up!</legend>
                  <label>
-               Email
+
                <input type="text" name="credentials[email]" placeholder="Email">
              </label>
                  <label>
-               Password
+
                <input type="password" name="credentials[password]" placeholder="Password">
              </label>
                  <label>
-               Password Confirmation
                <input type="password" name="credentials[password_confirmation]" placeholder="Confirm Password">
              </label>
-                 <input type="submit" name="submit" value="Sign up!">
+                 <input type="submit" name="submit" class="login loginmodal-submit" value="Sign up!">
                </fieldset>
                <div class="form-message" id="sign-up-prompt"></div>
              </form>
@@ -116,16 +112,15 @@
            <div class="modal-body">
              <form id="sign-in">
                <fieldset>
-                 <legend>Sign In!</legend>
                  <label>
-               Email
+
                <input type="text" name="credentials[email]" placeholder="Email">
              </label>
                  <label>
-               Password
+
                <input type="password" name="credentials[password]" placeholder="Password">
              </label>
-                 <input type="submit" name="submit" value="Sign In!">
+                 <input type="submit" name="submit"  class="login loginmodal-submit" value="Sign In!">
                </fieldset>
                <div class="form-message" id="sign-in-prompt"></div>
              </form>
@@ -151,16 +146,13 @@
            <div class="modal-body">
              <form id="change-password">
                <fieldset>
-                 <legend>Change Password!</legend>
                  <label>
-               Current Password
-               <input type="password" type="current password" name="passwords[old]" placeholder="Old Password">
+               <input type="password" type="current password" name="passwords[old]" placeholder="Current Password">
              </label>
                  <label>
-               New Password
                <input type="password" type="new password" name="passwords[new]" placeholder="New Password">
              </label>
-                 <input type="submit" name="submit" value="Change Password!">
+                 <input type="submit" name="submit" class="login loginmodal-submit" value="Change Password!">
                </fieldset>
                <div class="form-message" id="change-pw-prompt"></div>
              </form>
@@ -192,8 +184,8 @@
        </div>
 
 
+       <section class="kitchen-render" ></section>
       <section class="kitchens" id="kitchen-table"></section>
-      <section class="kitchen-render" ></section>
       <div class="log"></div>
 
     </body>
